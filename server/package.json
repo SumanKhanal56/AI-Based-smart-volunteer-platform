@@ -1,0 +1,40 @@
+{
+  "name": "volunterr-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "seed:provinces": "node src/seedProvinceData.js",
+    "migrate:atlas": "node src/migrateLocalToAtlas.js",
+    "images:backfill": "node src/backfillOpportunityImages.js",
+    "profiles:backfill": "node src/backfillDemoProfiles.js",
+    "passwords:reset-local": "node src/scripts/TEMPORARY_resetAllLocalPasswords.js",
+    "passwords:reset-organisations": "node src/scripts/TEMPORARY_resetOrganizationPasswords.js",
+    "test": "npm run test:unit",
+    "test:unit": "npm run test:backend && npm run test:frontend",
+    "test:backend": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --config ../evaluation/jest.config.cjs --runInBand evaluation/backend/unit",
+    "test:frontend": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --config ../evaluation/jest.config.cjs --runInBand evaluation/frontend",
+    "test:integration": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --config ../evaluation/jest.config.cjs --runInBand evaluation/backend/integration",
+    "test:all": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --config ../evaluation/jest.config.cjs --runInBand",
+    "test:coverage": "node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --config ../evaluation/jest.config.cjs --runInBand evaluation/backend/unit evaluation/frontend --coverage"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.10.2",
+    "morgan": "^1.10.1",
+    "nodemailer": "^10.0.13"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.3.0"
+  }
+}
