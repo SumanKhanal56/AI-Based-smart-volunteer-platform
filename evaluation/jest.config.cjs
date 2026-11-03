@@ -16,8 +16,6 @@ module.exports = {
     '<rootDir>/server/src/**/*.js',
     '<rootDir>/client/src/data/**/*.js',
     '!<rootDir>/server/src/server.js',
-    '!<rootDir>/server/src/seed.js',
-    '!<rootDir>/server/src/seedProvinceData.js',
     '!<rootDir>/server/src/scripts/**'
   ]
 };

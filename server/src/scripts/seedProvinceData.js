@@ -1,10 +1,10 @@
 // This script adds sample organizations and opportunities for Nepal's provinces.
 import 'dotenv/config';
 import { randomBytes } from 'node:crypto';
-import { closeDatabase, connectDatabase } from './config/db.js';
-import User from './models/User.js';
-import Opportunity from './models/Opportunity.js';
-import Application from './models/Application.js';
+import { closeDatabase, connectDatabase } from '../config/db.js';
+import User from '../models/User.js';
+import Opportunity from '../models/Opportunity.js';
+import Application from '../models/Application.js';
 
 const DEADLINE_YEAR = 2026;
 const applicationDeadline = (offset) => new Date(Date.UTC(DEADLINE_YEAR, 11, 25 + (offset % 7), 12));

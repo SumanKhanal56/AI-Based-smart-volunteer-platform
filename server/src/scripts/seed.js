@@ -1,10 +1,10 @@
 // This script adds the main sample data to MongoDB.
 import 'dotenv/config';
 import { fileURLToPath } from 'node:url';
-import { closeDatabase, connectDatabase } from './config/db.js';
-import User from './models/User.js';
-import Opportunity from './models/Opportunity.js';
-import Application from './models/Application.js';
+import { closeDatabase, connectDatabase } from '../config/db.js';
+import User from '../models/User.js';
+import Opportunity from '../models/Opportunity.js';
+import Application from '../models/Application.js';
 
 const futureDate = (days) => new Date(Date.now() + days * 86_400_000);
 

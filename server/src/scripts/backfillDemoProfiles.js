@@ -1,7 +1,7 @@
 // This script adds missing details to sample user profiles.
 import 'dotenv/config';
-import { closeDatabase, connectDatabase } from './config/db.js';
-import User from './models/User.js';
+import { closeDatabase, connectDatabase } from '../config/db.js';
+import User from '../models/User.js';
 
 const demoProfiles = {
   'volunteer@volunterr.test': {

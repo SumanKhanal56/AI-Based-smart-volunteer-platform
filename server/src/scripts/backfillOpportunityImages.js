@@ -1,7 +1,7 @@
 // This script adds missing images to existing opportunities.
 import 'dotenv/config';
-import { closeDatabase, connectDatabase } from './config/db.js';
-import Opportunity from './models/Opportunity.js';
+import { closeDatabase, connectDatabase } from '../config/db.js';
+import Opportunity from '../models/Opportunity.js';
 
 const opportunityMetadata = {
   'Restore the Bagmati Riverbank': { image: '/images/opportunities/bagmati-riverbank.jpg', district: 'Lalitpur' },

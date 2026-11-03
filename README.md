@@ -73,9 +73,8 @@ The code is divided into frontend, backend, and evaluation folders. This prevent
     |   |   |-- middleware/          Login and permission checks
     |   |   |-- models/              Mongoose database schemas
     |   |   |-- routes/              Express API endpoints
-    |   |   |-- scripts/             One-time maintenance scripts
+    |   |   |-- scripts/             Seed and maintenance scripts
     |   |   |-- utils/               Shared backend helper functions
-    |   |   |-- seed.js              Main demonstration data
     |   |   +-- server.js            Backend starting point
     |   +-- .env.example             Example backend configuration
     |
